@@ -8,28 +8,9 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 import "hardhat/console.sol";
 
 contract Mynft is ERC721 {
-    struct tokendetails {
-        address owner;
-        uint price;
-    }
-
-    mapping(uint => tokendetails) tokendetailsbyid;
-    uint[] tokensavaialble;
-
     constructor() ERC721("openmarket", "omkt") {}
 
-    function mint(uint tokenId, uint price) external {
+    function mint(uint tokenId) external {
         _mint(msg.sender, tokenId);
-        tokensavaialble.push(tokenId);
-        tokendetailsbyid[tokenId].owner = msg.sender;
-        tokendetailsbyid[tokenId].price = price;
-    }
-
-    function returnlistoftokens() external view returns (uint[] memory){
-        return tokensavaialble;
-    }
-
-    function priceoftoken(uint tokenid) external view returns  (uint){
-        return tokendetailsbyid[tokenid].price;
     }
 }

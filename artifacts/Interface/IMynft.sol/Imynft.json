@@ -180,38 +180,6 @@
     {
       "inputs": [
         {
-          "internalType": "uint256",
-          "name": "tokenid",
-          "type": "uint256"
-        }
-      ],
-      "name": "priceoftoken",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "returnlistoftokens",
-      "outputs": [
-        {
-          "internalType": "uint256[]",
-          "name": "",
-          "type": "uint256[]"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
           "internalType": "address",
           "name": "from",
           "type": "address"
